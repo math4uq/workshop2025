@@ -15,6 +15,7 @@
       --card-bg: #ffffff;
       --radius: 8px;
       --shadow: rgba(0, 0, 0, 0.08);
+      --row-alt: #f9f9f9;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -93,6 +94,28 @@
     .btn:hover {
       background: #0047b3;
     }
+        .table-container {
+      overflow-x: auto;
+      margin-top: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: auto;
+    }
+    table th, table td {
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+    table th {
+      background: var(--accent);
+      color: #fff;
+    }
+    tbody tr:nth-child(odd) { background: #ffffff; }
+    tbody tr:nth-child(even) { background: var(--row-alt); }
     footer {
       text-align: center; padding: 2rem 1rem; color: #666;
       font-size: 0.9rem;
@@ -180,10 +203,38 @@
     </div>
   </section>
 
-  <section id="agenda">
-    <div class="card">
+  <section id="agenda"><div class="card">
       <h2>Agenda</h2>
-      <p><em>To be announced soon.</em></p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Wednesday, August 13</th>
+              <th>Thursday, August 14</th>
+              <th>Friday, August 15</th>
+              <th>Saturday, August 16</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>08:30 - 09:00</td><td>Meet up at Melia</td><td>Registration &amp;<br/> Opening Remarks</td><td></td><td></td></tr>
+            <tr><td>09:00 - 09:45</td><td>Social activity</td><td>Raúl Tempone <br/>(keynote)</td><td>Abdul-Lateef Haji-Ali <br/>(keynote)</td><td></td></tr>
+            <tr><td>09:45 - 10:15</td><td>Social activity</td><td>Jana de Wiljes</td><td>Gerardo Rubino</td><td></td></tr>
+            <tr><td>10:15 - 10:45</td><td>Social activity</td><td>Luis Espath</td><td>Sebastian Krumscheid</td><td>Check-out & Departure</td></tr>
+            <tr><td>10:45 - 11:15</td><td>Social activity</td><td>Coffee Break</td><td>Coffee Break</td><td></td></tr>
+            <tr><td>11:15 - 12:00</td><td>Social activity</td><td>Christian Bayer <br/>(keynote)</td><td>Fabio Nobile <br/>(keynote)</td><td></td></tr>
+            <tr><td>12:00 - 13:00</td><td>Social activity</td><td>Break</td><td>Break</td><td></td></tr>
+            <tr><td>13:00 - 14:00</td><td>Social activity</td><td>Break</td><td>Break</td><td></td></tr>
+            <tr><td>14:00 - 14:30</td><td>Social activity</td><td>Jonas Kiessling</td><td>Ana Djurdjevac</td><td></td></tr>
+            <tr><td>14:30 - 15:00</td><td>Social activity</td><td>Martin Eigl</td><td>Håkon Hoel</td><td></td></tr>
+            <tr><td>15:00 - 15:30</td><td>Social activity</td><td>Denis Belomestny</td><td>Philipp Knechtges</td><td></td></tr>
+            <tr><td>15:30 - 16:00</td><td>Return</td><td>Coffee Break</td><td>Coffee Break</td><td></td></tr>
+            <tr><td>16:00 - 16:30</td><td></td><td>Lars Grasedyck</td><td>TBD</td><td></td></tr>
+            <tr><td>16:30 - 17:00</td><td></td><td>Preparation for Poster</td><td>TBD</td><td></td></tr>
+            <tr><td>17:00 - 19:30</td><td></td><td>Poster session</td><td></td><td></td></tr>
+            <tr><td>19:00 - 21:00</td><td></td><td></td><td>Dinner for <br/> Invited Guests</td><td></td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
