@@ -101,19 +101,26 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      table-layout: auto;
+      table-layout: fixed;
     }
     table th, table td {
       border: 1px solid rgba(0,0,0,0.1);
       padding: 0.5rem;
       text-align: center;
       font-size: 0.95rem;
-      white-space: nowrap;
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: anywhere;
     }
     table th {
       background: var(--accent);
       color: #fff;
     }
+    /* Fixed column widths to ensure tables fit page width */
+    table th:nth-child(1), table td:nth-child(1) { width: 15%; }
+    table th:nth-child(2), table td:nth-child(2) { width: 25%; }
+    table th:nth-child(3), table td:nth-child(3) { width: 45%; }
+    table th:nth-child(4), table td:nth-child(4) { width: 15%; }
     tbody tr:nth-child(odd) { background: #ffffff; }
     tbody tr:nth-child(even) { background: var(--row-alt); }
     footer {
@@ -167,7 +174,6 @@
         This workshop is organized by the 
         <a href="https://www.uq.rwth-aachen.de/cms/~eibnp/uq/?lidx=1" target="_blank">Mathematics for Uncertainty Quantification chair</a>
          at RWTH Aachen University.
-        A Zoom link will be provided to all registered participants.
         Attendance in person is limited to invited guests.
       </p>
       <div style="margin-top:1.5rem;">
@@ -203,42 +209,196 @@
   <section id="agenda"><div class="card">
       <h2>Agenda</h2>
       <div class="table-container">
+        <h3>Thursday, August 14, 2025</h3>
         <table>
           <thead>
             <tr>
               <th>Time</th>
-              <th>Wednesday, August 13</th>
-              <th>Thursday, August 14</th>
-              <th>Friday, August 15</th>
-              <th>Saturday, August 16</th>
+              <th>Presenter</th>
+              <th>Title</th>
+              <th>Chair</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>08:30 - 09:00</td><td>Meet up at Melia</td><td>Registration/Opening Remarks <br/>(5th floor next to restaurant)</td><td></td><td></td></tr>
-            <tr><td>09:00 - 09:45</td><td>Social activity</td><td>Raúl Tempone <br/>(keynote)</td><td>Abdul-Lateef Haji-Ali <br/>(keynote)</td><td></td></tr>
-            <tr><td>09:45 - 10:15</td><td>Social activity</td><td>Jana de Wiljes</td><td>Gerardo Rubino</td><td></td></tr>
-            <tr><td>10:15 - 10:45</td><td>Social activity</td><td>Luis Espath</td><td>Sebastian Krumscheid</td><td>Check-out & Departure</td></tr>
-            <tr><td>10:45 - 11:15</td><td>Social activity</td><td>Coffee Break</td><td>Coffee Break</td><td></td></tr>
-            <tr><td>11:15 - 12:00</td><td>Social activity</td><td>Christian Bayer <br/>(keynote)</td><td>Fabio Nobile <br/>(keynote)</td><td></td></tr>
-            <tr><td>12:00 - 13:00</td><td>Social activity</td><td>Break</td><td>Break</td><td></td></tr>
-            <tr><td>13:00 - 14:00</td><td>Social activity</td><td>Break</td><td>Break</td><td></td></tr>
-            <tr><td>14:00 - 14:30</td><td>Social activity</td><td>Ana Djurdjevac</td><td>Break</td><td></td></tr>
-            <tr><td>14:30 - 15:00</td><td>Social activity</td><td>Martin Eigel</td><td>Håkon Hoel</td><td></td></tr>
-            <tr><td>15:00 - 15:30</td><td>Social activity</td><td>Denis Belomestny</td><td>Philipp Knechtges</td><td></td></tr>
-            <tr><td>15:30 - 16:00</td><td>Return</td><td>Coffee Break</td><td>Coffee Break</td><td></td></tr>
-            <tr><td>16:00 - 16:30</td><td></td><td>Lars Grasedyck</td><td>TBD</td><td></td></tr>
-            <tr><td>16:30 - 17:00</td><td></td><td>Preparation for Poster</td><td>TBD</td><td></td></tr>
-            <tr><td>17:00 - 19:30</td><td></td><td>Poster session</td><td></td><td></td></tr>
-            <tr><td>19:00 - 21:00</td><td></td><td></td><td>Dinner for <br/> Invited Guests</td><td></td></tr>
-        </tbody>
-      </table>
+            <tr>
+              <td>08:30 - 09:00</td>
+              <td>Registration &amp; Opening Remarks (5th floor next to the restaurant)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>09:00 - 09:45</td>
+              <td>Keynote: Raúl Tempone </br> (RWTH Aachen University and KAUST)</td>
+              <td>Seven Years of Mathematics for Uncertainty Quantification at RWTH Aachen: Research Highlights and Impact</td>
+              <td>Abdul-Lateef Haji-Ali</td>
+            </tr>
+            <tr>
+              <td>09:45 - 10:15</td>
+              <td>Jana de Wiljes </br> (University of Potsdam)</td>
+              <td>Long-Time Stability and Accuracy of Gaussian Filters for Randomised Observations</td>
+              <td>Abdul-Lateef Haji-Ali</td>
+            </tr>
+            <tr>
+              <td>10:15 - 10:45</td>
+              <td>Luis Espath </br>(University of Nottingham)</td>
+              <td>Stochastic Riemannian Optimization on Statistical Manifolds for PDE-Constrained Optimization</td>
+              <td>Abdul-Lateef Haji-Ali</td>
+            </tr>
+            <tr>
+              <td>10:45 - 11:15</td>
+              <td>Coffee Break </br>(5th Floor)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>11:15 - 12:00</td>
+              <td>Keynote: Christian Bayer </br>(Weierstrass Institute, Berlin)</td>
+              <td>T.B.D.</td>
+              <td>Abdul-Lateef Haji-Ali</td>
+            </tr>
+            <tr>
+              <td>12:00 - 14:00</td>
+              <td>Lunch Break</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>14:00 - 14:30</td>
+              <td>Ana Djurdjevac </br>(Freie Universität Berlin)</td>
+              <td>An inertial PDE system for the Cucker-Smale model of dynamics</td>
+              <td>Fabio Nobile</td>
+            </tr>
+            <tr>
+              <td>14:30 - 15:00</td>
+              <td>Martin Eigel </br>(Weierstrass Institute, Berlin)</td>
+              <td>Implicit Wasserstein Steps &amp; Hamilton–Jacobi Flows: Low-Rank Tensor Sampling in High Dimensions</td>
+              <td>Fabio Nobile</td>
+            </tr>
+            <tr>
+              <td>15:00 - 15:30</td>
+              <td>Denis Belomesnty </br>(Duisburg-Essen University)</td>
+              <td>Tight Bounds for Schrodinger Potential Estimation in Unpaired Image-to-Image Translation Problems</td>
+              <td>Fabio Nobile</td>
+            </tr>
+            <tr>
+              <td>15:30 - 16:00</td>
+              <td>Coffee Break </br>(5th Floor)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>16:00 - 16:30</td>
+              <td>Lars Grasedyck </br>(RWTH Aachen University)</td>
+              <td>T.B.D.</td>
+              <td>Fabio Nobile</td>
+            </tr>
+            <tr>
+              <td>16:30 - 17:00</td>
+              <td>Break and Preparations for Poster Session</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>17:00 - 19:30</td>
+              <td>Poster Session</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-container">
+        <h3>Friday, August 15, 2025</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Presenter</th>
+              <th>Title</th>
+              <th>Chair</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:00 - 09:45</td>
+              <td>Keynote: Abdul-Lateef Haji-Ali </br>(Heriot-Watt University)</td>
+              <td>Hierarchical Methods for Risk Assessment</td>
+              <td>Raúl Tempone</td>
+            </tr>
+            <tr>
+              <td>09:45 - 10:15</td>
+              <td>Gerardo Rubino </br>(Inria, Univ. Rennes, IRISA)</td>
+              <td>Algebraic duality, matrix equations and transient analysis of Markov processes</td>
+              <td>Raúl Tempone</td>
+            </tr>
+            <tr>
+              <td>10:15 - 10:45</td>
+              <td>Sebastian Krumscheid </br>(Karlsruhe Institute of Technology)</td>
+              <td>T.B.D.</td>
+              <td>Raúl Tempone</td>
+            </tr>
+            <tr>
+              <td>10:45 - 11:15</td>
+              <td>Coffee Break (5th Floor)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>11:15 - 12:00</td>
+              <td>Keynote: Fabio Nobile </br>(École polytechnique fédérale de Lausanne)</td>
+              <td>Stochastic gradient with least-squares control variates</td>
+              <td>Raúl Tempone</td>
+            </tr>
+            <tr>
+              <td>12:00 - 14:00</td>
+              <td>Lunch Break</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>14:00 - 14:30</td>
+              <td>Håkon Hoel </br>(University of Oslo)</td>
+              <td>High-order adaptive methods for exit times of diffusion processes and reflected diffusions</td>
+              <td>Christian Bayer</td>
+            </tr>
+            <tr>
+              <td>14:30 - 15:00</td>
+              <td>Philipp Knechtges </br>(German Aerospace Center (DLR))</td>
+              <td>Cardiac Volume Estimation from Real-Time MRI</td>
+              <td>Christian Bayer</td>
+            </tr>
+            <tr>
+              <td>15:30 - 16:00</td>
+              <td>Coffee Break (5th Floor)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>19:00 - 21:00</td>
+              <td>Dinner (Invited guests only)</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="remote">
+    <div class="card" style="text-align:center;">
+      <h2>Remote Attendance</h2>
+      <p>If you are joining remotely, you can attend the workshop via our Zoom meeting.</p>
+      <div style="margin-top:1rem;">
+        <a class="btn" href="https://rwth.zoom-x.de/j/64007610489?pwd=tO34FB2LmQZ46bNQpiMLAAX8cetag3.1" target="_blank">Join via Zoom</a>
+      </div>
     </div>
   </section>
 
   <section id="register">
     <div class="card" style="text-align:center;">
       <h2>Registration Form</h2>
-      <p>The zoom link will be provided to all registered participants.</p>
       <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf-0RS-eXJrGx9pyv4u3wU7fPcMVTTyBLbqqKw0lpDhE0NNYw/viewform?usp=sharing&ouid=105864945792577491109" target="_blank">Register</a>
     </div>
   </section>
